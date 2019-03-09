@@ -1,0 +1,14 @@
+<HTML>
+<HEAD><TITLE>remove text</title></head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<textarea cols="40" rows="7" id="text" placeholder="טקסט מקורי"></textarea></br>
+<input id="replace" placeholder="טקסט שיש להחליף"></br>
+<button id="riplace">החלף</button>
+<script>
+$("#riplace").click(function () {
+    $(document.body).html($("#text").val().replace(new RegExp($("#replace").val(),"g"), ""));
+});
+</script>
+</body>
+</HTML>
